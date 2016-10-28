@@ -135,8 +135,21 @@ document.getElementById("giveYear").addEventListener("click", function() {
 //    No names next to each other in the array should be on the same team.
      teammates = ["Harold", "Bob", "Sue", "Grady", "Notorious B.I.G.", "JavaCrypt", "Weird guy in the back", "Gary", "Carol", "Hipster Tim", "Janet"]
 
+function teamSorter(array) {
+	team1 = [];
+	team2 = [];
+	for (i = 0; i < array.length; i++) {
+		if (i == 0 || i % 2 == 0) {
+			team1.push(teammates[i])
+		} else {
+			team2.push(teammates[i])
+		}
+	}
+	document.getElementById("q10").innerHTML = team1;
+	document.getElementById("q10b").innerHTML = team2;
+}
 
-
+teamSorter(teammates);
 
 // 11. Allow a user to enter a three digit number. 
 //     Write a function that adds the numbers together.
