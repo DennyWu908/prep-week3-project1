@@ -121,9 +121,15 @@ sleepings(5);
 
 // 9. Develop a function that determines a person's age by asking them for their birth year.
 
+function yourAge(birthYear) {
+	var daAge = 2016 - birthYear
+	document.getElementById("q9").innerHTML = daAge;
+}
 
-
-
+document.getElementById("giveYear").addEventListener("click", function() {
+	var userYear = document.getElementById("year").value;
+	yourAge(userYear);
+});
 
 // 10. Write a function that accepts the following array and separates the people into two teams. Display each team within the HTML page. 
 //    No names next to each other in the array should be on the same team.
