@@ -175,14 +175,25 @@ document.getElementById("giveNumber").addEventListener("click", function() {
 //     Finally, it should return the total amount of change you have in the following format: "$32.77"
 //     HINT: Understanding the toFixed method will help you with the format.
 
+function countChange(qtr, dim, nikl, pen) {
+	var qtrTotal = qtr * 0.25
+	var dimTotal = dim * 0.1
+	var niklTotal = nikl * 0.05
+	var penTotal = pen * 0.01
 
+	var chngSubttl = qtrTotal + dimTotal + niklTotal + penTotal
+	var chngTotal = chngSubttl.toFixed(2);
+	document.getElementById("q12").innerHTML = chngTotal;
+}
 
+document.getElementById("giveChange").addEventListener("click", function() {
+	var userQ = document.getElementById("fourths").value;
+	var userD = document.getElementById("tenths").value;
+	var userN = document.getElementById("fivePercent").value;
+	var userP = document.getElementById("onePercent").value;
 
-
-
-
-
-
+	countChange(userQ, userD, userN, userP);
+});
 
 
 
