@@ -156,9 +156,18 @@ teamSorter(teammates);
 //     Hint #1: You need to turn a string into an integer.
 //     Hint #2: Strings can be treated as arrays too.
 
+function addInput(numstring) {
+	var dig1 = parseInt(numstring[0])
+	var dig2 = parseInt(numstring[1])
+	var dig3 = parseInt(numstring[2])
+	var sum = dig1 + dig2 + dig3
+	document.getElementById("q11").innerHTML = sum;
+}
 
-
-
+document.getElementById("giveNumber").addEventListener("click", function() {
+	var userNum = document.getElementById("centPlace").value;
+	addInput(userNum);
+});
 
 // 12. You've finally gotten around to counting the change in your piggy bank. 
 //     Write a function that accepts four parameters from a user (quarters, dimes, nickels, and pennies).
